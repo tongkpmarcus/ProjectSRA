@@ -11,6 +11,9 @@ from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from pypdf import PdfReader
 
+__import__('pysqlite3') 
+import sys 
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3') 
 
 
 if load_dotenv('.env'):
