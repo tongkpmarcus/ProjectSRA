@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+import streamlit as st
 from openai import OpenAI
 import tiktoken
 from langchain_community.chat_models import ChatOpenAI
