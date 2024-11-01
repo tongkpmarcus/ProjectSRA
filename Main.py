@@ -1,6 +1,6 @@
 import streamlit as st
 from helper_functions import llm
-from utility import check_password()
+from utility import check_password
 
 # region <--------- RAG config --------->
 if __name__ == "__main__":
