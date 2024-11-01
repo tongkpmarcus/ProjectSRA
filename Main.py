@@ -1,8 +1,15 @@
+import os
 import streamlit as st
+from dotenv import load_dotenv
 from helper_functions import llm
 from utility import check_password
 
-OPENAI_KEY = st.secrets['OPENAI_API_KEY']
+if load_dotenv('.env'):
+   # for local development
+   OPENAI_KEY = os.getenv('OPENAI_API_KEY')
+else:
+   OPENAI_KEY = st.secrets['OPENAI_API_KEY']
+
 
 # region <--------- RAG config --------->
 if __name__ == "__main__":
