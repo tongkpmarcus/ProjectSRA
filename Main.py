@@ -6,7 +6,7 @@ from utility import check_password
 # region <--------- RAG config --------->
 if __name__ == "__main__":
     # Path to your PDF files 
-    pdf_paths = "C:\ProjectSRA\AeMF_SRA.pdf","C:\ProjectSRA\Common_SRA.pdf"
+    pdf_paths = "AeMF_SRA.pdf","Common_SRA.pdf"
 
    
     # Load the PDF
