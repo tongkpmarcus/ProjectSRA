@@ -1,6 +1,6 @@
 import streamlit as st
 from helper_functions import llm
-
+from utility import check_password()
 
 # region <--------- RAG config --------->
 if __name__ == "__main__":
@@ -39,7 +39,9 @@ st.set_page_config(
     page_title="Project SRA",
     page_icon="✈️"
 )
-
+# Do not continue if check_password is not True.  
+if not check_password():  
+    st.stop()
 # Title and Description
 st.title("Project SRA")
 st.markdown(
