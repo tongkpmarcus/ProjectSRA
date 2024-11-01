@@ -4,7 +4,7 @@ import streamlit as st
 from openai import OpenAI
 import tiktoken
 from langchain_community.chat_models import ChatOpenAI
-from langchain_chroma import Chroma
+from langchain.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter, CharacterTextSplitter
 from langchain.chains import RetrievalQA
