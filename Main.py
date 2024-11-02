@@ -84,8 +84,9 @@ if form.form_submit_button("Submit"):
     
     # Prepare the prompt for the LLM
     prompt = f"""
-    The prompt below should be an aircraft maintenance task. If it does not sound like one, respond with "Please enter a valid task.". Find the closest Incident report to the task from Mock_previous_incident, if not related, put NIL. 
-    If valid, provide a response in the following format:
+    The prompt below should be an aircraft maintenance task. If it does not sound like one, respond with "Please enter a valid task.".\n
+    Find the closest Incident report to the task from Mock_previous_incidents, if not related, put NIL, do not hallucinate, only take in incidents from mock_incident_report. 
+    If valid, use qachain to help answer and provide a response in the following format:
 
     Equipment Needed:
     Hazards:
@@ -98,7 +99,7 @@ if form.form_submit_button("Submit"):
 
     Text: '''{user_prompt}'''
 
-    Try to use the documents provided to answer to questions. 
+   
     """
     
 
