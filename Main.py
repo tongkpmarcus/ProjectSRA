@@ -10,11 +10,11 @@ if load_dotenv('.env'):
 else:
    OPENAI_KEY = st.secrets['OPENAI_API_KEY']
 
-
 # region <--------- RAG config --------->
+
 if __name__ == "__main__":
     # Path to your PDF files 
-    pdf_paths = "AeMF_SRA.pdf","Common_SRA.pdf"
+    pdf_paths = "AeMF_SRA.pdf","Common_SRA.pdf","Mock_previous_incidents.pdf"
 
    
     # Load the PDF
@@ -36,9 +36,6 @@ if __name__ == "__main__":
 
     # Step 4: Set up the QA retrieval chain
     qa_chain = llm.retrieve_QA(vectordb)
-
-    
-
 
 # endregion <--------- RAG config --------->
 
@@ -87,7 +84,7 @@ if form.form_submit_button("Submit"):
     
     # Prepare the prompt for the LLM
     prompt = f"""
-    The prompt below should be an aircraft maintenance task. If it does not sound like one, respond with "Please enter a valid task.".
+    The prompt below should be an aircraft maintenance task. If it does not sound like one, respond with "Please enter a valid task.". If no related previous incident reports, just put NIL. 
     If valid, provide a response in the following format:
 
     Equipment Needed:
@@ -97,7 +94,11 @@ if form.form_submit_button("Submit"):
 
     Other Suggestions and Tips:
 
+    Previous Incident Reports:
+
     Text: '''{user_prompt}'''
+
+    Try to use the documents provided to answer to questions. 
     """
     
 
