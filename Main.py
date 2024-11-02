@@ -84,7 +84,7 @@ if form.form_submit_button("Submit"):
     
     # Prepare the prompt for the LLM
     prompt = f"""
-    The prompt below should be an aircraft maintenance task. If it does not sound like one, respond with "Please enter a valid task.". If no related previous incident reports, just put NIL. 
+    The prompt below should be an aircraft maintenance task. If it does not sound like one, respond with "Please enter a valid task.". Find the closest Incident report to the task from Mock_previous_incident, if not related, put NIL. 
     If valid, provide a response in the following format:
 
     Equipment Needed:
