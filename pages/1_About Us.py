@@ -7,11 +7,11 @@ st.set_page_config(
 st.title("About Us") 
 st.markdown(
     """
-    Welcome to Project SRA(ProSRA), where we are dedicated to simplifying safety risk assessments for everyone.\n
-    Our mission is to make the reviewing process efficient and straightforward, \n
-    empowering everyone to identify and manage risks with confidence and ease. \n
-    By streamlining previous cross-examining processes for risk assessment, \n
-    we now provide a user-friendly interface that lists all necessary information for SRA, \n
+    Welcome to Project SRA(ProSRA), where we are dedicated to simplifying safety risk assessments for everyone.
+    Our mission is to make the reviewing process efficient and straightforward, 
+    empowering everyone to identify and manage risks with confidence and ease. 
+    By streamlining previous cross-examining processes for risk assessment, 
+    we now provide a user-friendly interface that lists all necessary information for SRA, 
     all in one place. 
 
     """
