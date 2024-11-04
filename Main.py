@@ -56,7 +56,8 @@ st.markdown(
     Please select a flight and enter the maintenance task you want to evaluate.
     """
 )
-st.expander(
+st.header("Disclaimer:)
+st.markdown(
     """IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. 
     The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions,
     especially those related to financial, legal, or healthcare matters.
@@ -64,8 +65,7 @@ st.expander(
     You assume full responsibility for how you use any generated output.
     Always consult with qualified professionals for accurate and personalized advice.
     """
-): 
-   st.write("Please use this tool responsibly and for demonstration purposes only.")
+)
 
 
 # Sidebar for Navigation (optional)
