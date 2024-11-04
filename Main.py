@@ -56,8 +56,7 @@ st.markdown(
     Please select a flight and enter the maintenance task you want to evaluate.
     """
 )
-
-with st.expander(
+st.expander(
     """IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. 
     The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions,
     especially those related to financial, legal, or healthcare matters.
@@ -67,6 +66,7 @@ with st.expander(
     """
 ): 
    st.write("Please use this tool responsibly and for demonstration purposes only.")
+
 
 # Sidebar for Navigation (optional)
 # st.sidebar.success("Select Any Page from here") 
