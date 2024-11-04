@@ -61,11 +61,7 @@ st.markdown(
 # st.sidebar.success("Select Any Page from here") 
 # endregion <--------- Streamlit App Configuration --------->
 
-st.expander(
-    """IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. 
-    The information provided here is NOT intended for actual usage and should not be relied upon 
-    for making any decisions, especially those related to financial, legal, or healthcare matters."""
-)
+
 
 # Flight Selection
 st.header("Flight Selection")
@@ -126,6 +122,12 @@ if form.form_submit_button("Submit"):
     with col2:
         st.header("Response_emb:")
         st.write(response_emb)
+
+st.expander(
+    """IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. 
+    The information provided here is NOT intended for actual usage and should not be relied upon 
+    for making any decisions, especially those related to financial, legal, or healthcare matters."""
+)
 
 
 
