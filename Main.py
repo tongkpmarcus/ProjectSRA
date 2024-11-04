@@ -55,15 +55,12 @@ st.markdown(
     Welcome to the Safety Risk Assessment tool! 
     Please select a flight and enter the maintenance task you want to evaluate.
 
-   IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. 
-    The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions,
-    especially those related to financial, legal, or healthcare matters.
-    Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. 
-    You assume full responsibility for how you use any generated output.
-    Always consult with qualified professionals for accurate and personalized advice.
     """
 )
-
+with st.expander("IMPORTANT NOTICE"): 
+    st.write(f"""This web application is developed as a proof-of-concept prototype. The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions, especially those related to financial, legal, or healthcare matters. 
+                    Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. You assume full responsibility for how you use any generated output. 
+                    Always consult with qualified professionals for accurate and personalized advice.""")
 
 
 # Sidebar for Navigation (optional)
@@ -132,16 +129,7 @@ if form.form_submit_button("Submit"):
         st.header("Response_emb:")
         st.write(response_emb)
 
-st.header("Disclaimer:)
-st.markdown(
-    """IMPORTANT NOTICE: This web application is developed as a proof-of-concept prototype. 
-    The information provided here is NOT intended for actual usage and should not be relied upon for making any decisions,
-    especially those related to financial, legal, or healthcare matters.
-    Furthermore, please be aware that the LLM may generate inaccurate or incorrect information. 
-    You assume full responsibility for how you use any generated output.
-    Always consult with qualified professionals for accurate and personalized advice.
-    """
-)
+
    
 
 
